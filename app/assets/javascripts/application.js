@@ -10,6 +10,16 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
+//= require jquery-1.9.1.min
 //= require jquery_ujs
-//= require_tree .
+//= require modernizr.custom
+//= require waypoints.min
+//= require bootstrap
+//= require jquery.fancybox-media
+//= require jquery.fancybox.pack
+//= require jquery.flexslider
+//= require jquery.scrollto
+//= require jquery.tweet
+//= require retina
+//= require custom
+//= require jquery.imagemapster

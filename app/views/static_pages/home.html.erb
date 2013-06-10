@@ -1,0 +1,427 @@
+<% provide(:title, "Specilized in architecture, engineering, management and investment sevices in Vietnam") %>
+<section id="home">
+    <div class="row centered">
+        <h1 class="fade-it">
+            <div id="MapWrapper" style="margin:auto; width:350px;">
+              <%= image_tag "logo.png", id: "shape1", usemap: "#shape1", alt: "shape1" %>
+               <!-- <img alt="ABBO Logo" src="img/logo.png" border="0" id="shape1" usemap="#shape1" alt="shape1"> -->
+            </div>
+            <map name="shape1" id="Map">
+                <area shape="circle" coords="196,195,49" href="#" color="blue" alt="About us" />
+                <area shape="poly" coords="25,218,48,215,70,213,91,213,113,214,124,215,132,217,140,220,143,224,142,232,138,242,131,254,124,264,115,277,106,289,96,299,88,309,79,318,75,320,63,306,49,289,39,269,30,246,27,231" href="#" color="green" alt="Developmet" />
+                <area shape="poly" coords="85,326,101,308,115,292,130,278,149,261,162,252,171,249,177,254,180,261,183,270,186,282,188,293,189,304,190,317,190,326,190,340,190,367,175,367,158,365,142,360,124,353,105,343,95,337" href="#" color="purple" alt="Design" />
+                <area shape="poly" coords="200,369,200,349,201,323,203,301,205,280,207,270,211,259,215,251,220,250,229,255,240,262,249,269,262,281,273,291,285,304,294,315,302,324,305,328,292,339,277,349,256,358,228,366,214,368" href="#" color="orange" alt="Project" />
+                <area shape="poly" coords="315,320,303,308,290,293,275,275,261,255,255,242,248,230,250,220,255,216,271,213,294,214,309,214,324,215,339,216,355,218,366,220,364,235,359,252,351,273,337,297" href="#" color="black" alt="Management" />
+          </map>
+        </h1>
+
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <h2>ABBO COMMUNITY</h2>
+                </li>
+                <li><h2>... ABBO MISSION</h2></li>
+                <li><h2>... ABBO VISSION</h2></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- LITTLE LOGO SEE WHAT WE DO --> 
+    <div id="down_button" class="fade-it"><a href="#whatwedo"></a></div>
+    <div class="social-header hidden-phone">
+
+        <a href="#" class="social-network sn2 behance"></a>
+        <a href="#" class="social-network sn2 facebook"></a>
+        <a href="#" class="social-network sn2 pinterest"></a>
+        <a href="#" class="social-network sn2 flickr"></a>
+        <!-- <a href="#" class="social-network sn2 dribbble"></a>
+        <a href="#" class="social-network sn2 lastfm"></a>
+        <a href="#" class="social-network sn2 forrst"></a>
+        <a href="#" class="social-network sn2 xing"></a>  -->  
+    </div>
+    <!-- END LITTLE LOGO SEE WHAT WE DO --> 
+</section>
+
+ <!-- NAVIGATION  -->
+
+        <div class="navbar-wrapper">
+            <div class="navbar" id="navigation">
+                <div class="navbar-inner">
+                    <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <%= link_to (image_tag "logo_small.png"), root_path, class: "brand"%>
+                    <div class="nav-collapse collapse" >
+                        <ul class="nav pull-right">
+                            <li><%= link_to "Home", "#home", class: "selected" %></li>
+                            <li><%= link_to "portfolio", "#whatwedo" %></li>
+                            <li><%= link_to "services", "#services" %></li>
+                            <li><%= link_to "who we are", "#about" %></li>
+                            <li><%= link_to "Contact", "#contact" %></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+<!-- END NAVIGATION  -->
+
+<!-- WHAT WE DO SECTION  -->
+
+        <section id="whatwedo">
+            <div class="container">
+                <div class="row">
+                    <div class="span12 centered">
+                        <h2>Feature Portfolios</h2>
+                        <div class="breaker"><span class="left"></span><div class="feather"></div><span class="right"></span></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12 centered">
+                        <p class="subtittle" >See All ABBO Projects</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Crown New Can Factory -->
+                    <div class="span3 project">
+												<%=  image_tag "thumbs/1.png", alt: "New Can Can factory", class: "project-img" %>
+                        <a href="img/thumbs/1big.png" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
+                            <span class="overlay"><h5>Crown New Can Factory</h5></span>
+                            <div class="cnt"></div>
+                        </a>
+                        <div id="title-01" class="info hidden">
+                            <h2>Project Details</h2>
+                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
+                        </div>
+
+                
+                    <!-- Cagrill Long An -->
+                    </div>
+                    <div class="span3 project">
+
+                        <%=  image_tag "thumbs/2.png", alt: "Cagrill Long An", class: "project-img" %>
+                        <a href="img/thumbs/2big.png" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
+                            <span class="overlay"><h5>Cargill Long An Factory </h5></span>
+                            <div class="cnt"></div>
+                        </a>
+                        <div id="title-01" class="info hidden">
+                            <h2>Project Details</h2>
+                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
+                        </div>
+                    </div>
+
+                    <!-- Aqua Bien Hoa -->
+                    <div class="span3 project">
+
+                        <%=  image_tag "thumbs/3.png", alt: "Aqua Bien Hoa ", class: "project-img" %>
+                        <a href="img/thumbs/3big.png" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
+                            <span class="overlay"><h5>Aqua Bien Hoa</h5></span>
+                            <div class="cnt"></div>
+                        </a>
+                        <div id="title-01" class="info hidden">
+                            <h2>Project Details</h2>
+                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
+                        </div>
+
+                    <!-- La Casa Condominium  -->
+                    </div>
+                    <div class="span3 project">
+
+                        <%=  image_tag "thumbs/4.png", alt: "La Casa Condominium", class: "project-img" %>
+                        <a href="img/thumbs/4big.png" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
+                            <span class="overlay"><h5>La Casa Condominium </h5></span>
+                            <div class="cnt"></div>
+                        </a>
+                        <div id="title-01" class="info hidden">
+                            <h2>Project Details</h2>
+                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
+                        </div>
+
+
+                    <!-- Doosan Heavy Industries  -->
+                    </div>
+                    <div class="span3 project">
+
+                        <%=  image_tag "thumbs/5.jpg", alt: "Doosan Heavy Industries  ", class: "project-img" %>
+                        <a href="img/thumbs/5.jpg" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
+                            <span class="overlay"><h5>Doosan Heavy Industries </h5></span>
+                            <div class="cnt"></div>
+                        </a>
+                        <div id="title-01" class="info hidden">
+                            <h2>Project Details</h2>
+                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
+                        </div>
+
+                    </div>
+
+                    <!-- Doosan Heavy Industries    -->
+                    <div class="span3 project">
+
+                        <%=  image_tag "thumbs/6.jpg", alt: "Doosan Heavy Industries  ", class: "project-img" %>
+                        <a href="img/thumbs/6.jpg" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
+                            <span class="overlay"><h5>Saigon Tantec Leather Factory </h5></span>
+                            <div class="cnt"></div>
+                        </a>
+                        <div id="title-01" class="info hidden">
+                            <h2>Project Details</h2>
+                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
+                        </div>
+
+                    </div>
+
+                    <!-- Kirby Steel Factory -->
+                    <div class="span3 project">
+
+                        <%=  image_tag "thumbs/7.jpg", alt: "Kirby Steel Factory", class: "project-img" %>
+                        <a href="img/thumbs/7.jpg" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
+                            <span class="overlay"><h5>Kirby Steel Factory</h5></span>
+                            <div class="cnt"></div>
+                        </a>
+                        <div id="title-01" class="info hidden">
+                            <h2>Project Details</h2>
+                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
+                        </div>
+
+                    </div>
+
+                    <!-- Lilama Technical & Technology  -->
+                    <div class="span3 project">
+
+                        <%=  image_tag "thumbs/8.jpg", alt: "Lilama Technical & Technology", class: "project-img" %>
+                        <a href="img/thumbs/8.jpg" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
+                            <span class="overlay"><h5>Lilama Technical & Technology </h5></span>
+                            <div class="cnt"></div>
+                        </a>
+                        <div id="title-01" class="info hidden">
+                            <h2>Project Details</h2>
+                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END WHAT WE DO SECTION  -->
+
+    <!-- SERVICES SECTION  -->
+
+        <section id="services">
+
+            <div class="container">
+                <div class="row">
+                    <div class="span12 centered">
+                        <h2>what we do</h2>
+                        <div class="breaker"><span class="left"></span><div class="feather"></div><span class="right"></span></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12 centered">
+                        <p class="subtittle" >our areas of expertise the best we can offer </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    
+                    <div class="span4">
+                        <div class="box">
+                            <div class="box_icon">
+                                <i class="icon-cogs icon-5x"></i>
+                            </div>
+                            <h6><strong>Project Development</strong></h6>
+                           <!--  <p>
+                                No pri aliquip alienum. Em dolor es dumunere sum aet, usu at incorrupte.
+                            </p> -->
+
+                        </div>
+                    </div>
+
+                    <div class="span4">
+                        <div class="box">
+                            <div class="box_icon">
+                                <i class="icon-pencil icon-5x"></i>
+                            </div>
+                            <h6><strong>Architure, Structure & MEP Design</strong></h6>
+                           <!--  <p>
+                                Planning & Architectural - Civil & Structural - MEP - Interiors & Landscapes - BMS & Specialist Design - Specifications - Quantity Survey
+                            </p> -->
+
+                        </div>
+                    </div>
+
+                   <!--  <div class="span3">
+                        <div class="box">
+                            <div class="box_icon">
+                                <i class="icon-th-large icon-3x"></i>
+                            </div>
+                            <h6><strong>Project</strong></h6>
+                            <p>
+                                No pri aliquip alienum. Em dolor es dumunere sum aet, usu at incorrupte.
+                            </p>
+
+                        </div>
+                    </div> -->
+                    
+                    
+                    <div class="span4">
+                        <div class="box">
+                            <div class="box_icon">
+                                <i class="icon-group icon-5x"></i>
+                            </div>
+                            <h6><strong>Project Management</strong></h6>
+                         <!--    <p>
+                                Project Planning - Project Management - Construction Management - Contract Management - Design Planning & Management - Value Engineering Management - Investment Management - Bidding Management - Risk & Claim Management
+                            </p> -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+
+        </section>        
+        <!-- END SERVICES  -->
+<!-- WHO ARE US SECTION  -->
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="span12 centered">
+                        <h2>who we are</h2>
+                        <div class="breaker"><span class="left"></span><div class="feather"></div><span class="right"></span></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12 centered">
+                        <p class="subtittle" >Our Partner</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span4">
+                        <div class="team">
+                            <%= image_tag "team/male1.jpg", alt: "Nam Chau Son Bien Hoa" %>
+                            <span class="name">Nam Chau Son Bien Hoa - Vietnam</span><br/>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="team">
+                            <%= image_tag "team/female1.jpg", alt: "AWP Architure - Singapore" %>
+                            <span class="name">AWP Architure - Singapore</span><br/>
+
+                            </span> 
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="team">
+                            <%= image_tag "team/mei.png", alt: "M.E.I Project Enginering - Malaysia" %>
+                            <span class="name">M.E.I Project Enginering - Malaysia</span><br/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12 centered">
+                        <p class="subtittle" >Our Feature Clients</p>
+                    </div>
+                </div>
+
+                <!-- Clients logo -->
+                  <div class="row">
+                    <div class="span12 centered">
+                   
+                    <div id="myCarousel" class="carousel slide">
+                
+                      <!-- Carousel items -->
+                      <div class="carousel-inner">
+                        <div class="active item">
+                            <%= image_tag "thumbs/client-logo-1.jpg", alt: "Client logo 1" %>
+                        </div>
+                        <div class="item">
+                            <%= image_tag "thumbs/client-logo-2.jpg", alt: "Client logo 1" %>
+                        </div>
+                      </div>
+                      <!-- Carousel nav -->
+                      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                    </div>    
+
+
+                    
+                    
+
+                    </div>
+                </div>
+
+                <!-- End Client Logo -->
+
+            </div>
+        </section>
+        <!-- END WHO ARE US SECTION  -->
+
+         <!-- CONTACT SECTION  -->
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="span12 centered">
+                        <h2>Contact Us</h2>
+                        <div class="breaker">
+                            <span class="left"></span>
+                            <div class="feather"></div>
+                            <span class="right"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12 centered">
+                        <p class="subtittle" >Think we might help? We'd love to hear from you.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span7">
+                        <form name="" method="post" action=""> 
+                            <input type="text" name="first_name" placeholder="YOUR NAME" > 
+                            <input type="email" name="email" placeholder="YOUR E-MAIL" > 
+                            <textarea name="comments" cols="1" rows="5" placeholder="YOUR MESSAGE"  ></textarea>
+                            <button name="send" type="submit" class="button">Take a Leap</button>
+                        </form>
+                    </div>
+                    <div class="span5">
+                        <div class="info">
+                            <p class="contactAddress">Suite 103, 140 Nguyen Van Thu<br>District 1, HCMC<br>Vietnam
+                                <br><a class="fancybox-media fancybox.iframe" href="https://maps.google.com/maps/ms?msa=0&amp;msid=206154613515023424179.0004de09afb13e0acee65&amp;ie=UTF8&amp;t=m&amp;ll=10.78818,106.697266&amp;spn=0.005059,0.006866&amp;z=17&amp;output=embed">View Map</a></p>
+                        </div>
+                        <div class="info">
+                            <p class="contactPhone">Phone:  84-8-3910 6445</p>
+                            <p class="contactEmail">Email: <a href="mailto:info@abbo.com.vn">info@abbo.com.vn</a></p>
+                            <p class="contactSkype">Fax: 84-8-3910 6447</p>
+                        </div>
+                        <div class="info">
+                            <p class="contactTime">
+                                Mon-Fri: 8:00am → 5:30pm <br>
+                                Sat: 8:00am → 12:00am <br>
+                                Sunday: Closed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END CONTACT SECTION  -->
+
+        <!-- TWITTER MODULE  --> 
+        <section id="twitter_module">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div id="ticker" class="query"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END TWITTER MODULE  -->
+
+
