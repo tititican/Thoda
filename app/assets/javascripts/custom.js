@@ -53,7 +53,7 @@ jQuery(function($) {
 /* -- 03. SCROLL TO  -- */
 
 
-jQuery(document).ready(function($) {
+$(function() {
    $('ul.nav a, #down_button a').click(function(e) {
     $('html,body').scrollTo(this.hash, this.hash);
      e.preventDefault();
@@ -116,7 +116,7 @@ $(function() {
 });
 
 /* -- 05. FANCYBOX -- */
-$(document).ready(function() {
+$(function() {
     $(".fancybox-media").fancybox({
         arrows: true,
         padding: 0,
@@ -147,7 +147,7 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function () {
+$(function() {
   $('#shape1').mapster({
   singleSelect : true,
   clickNavigate : true,
