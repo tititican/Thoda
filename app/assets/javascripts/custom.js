@@ -26,7 +26,7 @@ $(window).load(function() {
 
 jQuery(function($) {
     $("#ticker").tweet({
-        username: 'cnn',
+        username: 'congdongabbo',
         page: 1,
         avatar_size: 0,
         count: 10,
