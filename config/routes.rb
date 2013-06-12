@@ -1,10 +1,12 @@
 AbboApp::Application.routes.draw do
   
-
-  get "static_pages/home"
-  get "static_pages/about"
+  match "/about",       to: "static_pages#about"
+  match "development",  to: "static_pages#development"
+  match "design",       to: "static_pages#design"
+  match "management",   to: "static_pages#management"
 
   root :to => 'static_pages#home'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

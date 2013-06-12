@@ -50,15 +50,7 @@ jQuery(function($) {
 });
 
 
-/* -- 03. SCROLL TO  -- */
 
-
-$(function() {
-   $('ul.nav a, #down_button a').click(function(e) {
-    $('html,body').scrollTo(this.hash, this.hash);
-     e.preventDefault();
-    });
-});
 
 /* -- 04. NAVBAR STICKY + SELECTED  -- */
 
