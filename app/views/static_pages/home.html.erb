@@ -379,12 +379,20 @@
                 </div>
                 <div class="row">
                     <div class="span7">
-                        <form name="" method="post" action=""> 
+                        <%= form_for @message, :url => contact_path do |form| %>
+                              <%= form.text_field :name, :placeholder => "Your Name" %>
+                              <%= form.text_field :email, :placeholder => "Your Email" %>
+                              <%= form.text_field :subject, :placeholder => "Your Subject"   %>
+                              <%= form.text_area :body, :placeholder => "Enter your message", :rows => "5" %>
+                              <%= button_tag "Send", :class => "button" %>
+                        <% end %>
+                       <!--  <form name="" method="post" action=""> 
                             <input type="text" name="first_name" placeholder="YOUR NAME" > 
                             <input type="email" name="email" placeholder="YOUR E-MAIL" > 
+                            <input type="text" name="first_name" placeholder="YOUR SUBJECT" > 
                             <textarea name="comments" cols="1" rows="5" placeholder="YOUR MESSAGE"  ></textarea>
-                            <button name="send" type="submit" class="button">Take a Leap</button>
-                        </form>
+                            <button name="send" type="submit" class="button">Send</button>
+                        </form> -->
                     </div>
                     <div class="span5">
                         <div class="info">

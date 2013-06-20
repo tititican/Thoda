@@ -58,5 +58,21 @@ module AbboApp
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Config Gmail Application for sending email
+
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "abbo.com.vn",
+      :user_name            => "an@abbo.com.vn",
+      :password             => "muathu123",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+
+    config.action_mailer.default_url_options = {
+      :host => "abbo.com.vn"
+    }
   end
 end
