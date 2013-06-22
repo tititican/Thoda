@@ -379,6 +379,13 @@
                 </div>
                 <div class="row">
                     <div class="span7">
+                        <% unless flash.empty?  %>
+                        <section class="alert">
+                        <% flash.each do |key, value| %>
+                          <div class="flash <%= key %>"><%= value %></div>
+                        <% end %>
+                        </section>
+                        <% end %>
                         <%= form_for @message, :url => contact_path do |form| %>
                               <%= form.text_field :name, :placeholder => "Your Name" %>
                               <%= form.text_field :email, :placeholder => "Your Email" %>
@@ -417,17 +424,6 @@
         </section>
         <!-- END CONTACT SECTION  -->
 
-        <!-- TWITTER MODULE  --> 
-        <section id="twitter_module">
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        <div id="ticker" class="query"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END TWITTER MODULE  -->
 
 
 <script> 
