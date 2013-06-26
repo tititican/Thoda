@@ -1,5 +1,8 @@
 AbboApp::Application.routes.draw do
   
+  resources :projects
+
+
   match "/about",       to: "static_pages#about"
   match "development",  to: "static_pages#development"
   match "design",       to: "static_pages#design"

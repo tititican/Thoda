@@ -1,0 +1,39 @@
+<div class="span9">
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, "Projects Name: (***)" %>
+    <%= f.text_field :name, :class => "span5" %>
+  </div>
+  <div class="field">
+    <%= f.label :activitives %>
+    <%= f.text_field :activitives, :class => "span5" %>
+  </div>
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location, :class => "span5" %>
+  </div>
+  <div class="field">
+    <%= f.label :year, "Year of built: " %>
+    <%= f.select :year, (2005..2020), {:selected => 2013}, { :class => "span3" } %>
+  </div>
+  <div class="field">
+    <%= f.label :desciption, "Description(***)" %>
+    <%= f.text_area :desciption, :class => "span7", :rows => "10" %>
+  </div>
+  <div class="actions">
+    <%= f.submit :class => "btn btn-large btn-primary"%>
+  </div>
+<% end %>
+</div>

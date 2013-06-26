@@ -1243,3 +1243,10 @@ footer a:hover{color: #ccc; text-decoration: none;}
     font-family:'Open Sans', sans-serif;
 }
 
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
