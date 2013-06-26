@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :name
       t.string :activitives
       t.string :location
-      t.date :year
+      t.integer :year
       t.text :desciption
 
       t.timestamps
