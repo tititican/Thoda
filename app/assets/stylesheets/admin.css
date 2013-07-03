@@ -12,6 +12,8 @@
  *= require style-responsive
  *= require font-awesome
  *= require font-awesome-ie7
- *= require bootstrap-wysihtml5
- *= require custom
+ *= require jquery.fancybox
+ *= require jquery.fancybox-thumbs
+ *= require flexslider
+ *= require style
  */
