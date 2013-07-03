@@ -10,6 +10,7 @@ gem 'jquery-rails', '2.0.2'
 gem 'rmagick'
 gem 'carrierwave'
 gem 'bootstrap-wysihtml5-rails'
+gem 'acts-as-taggable-on'
 
 
 group :development, :test do
