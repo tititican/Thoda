@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
     @message = Message.new
+    @projects = Project.limit(8)
   end
 
   def about

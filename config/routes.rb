@@ -1,7 +1,4 @@
 AbboApp::Application.routes.draw do
-  
-  resources :projects
-
 
   match "/about",       to: "static_pages#about"
   match "development",  to: "static_pages#development"
@@ -12,6 +9,10 @@ AbboApp::Application.routes.draw do
 
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post
+
+  resources :projects do 
+    resources :pictures
+  end
 
 
   # The priority is based upon order of creation:

@@ -23,3 +23,4 @@
 //= require retina
 //= require custom
 //= require jquery.imagemapster
+//= require bootstrap-wysihtml5

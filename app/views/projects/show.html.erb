@@ -1,30 +1,46 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>Name:</b> <br>
   <%= @project.name %>
 </p>
 
 <p>
-  <b>Activitives:</b>
+  <b>Activitives:</b> <br>
   <%= @project.activitives %>
 </p>
 
 <p>
-  <b>Location:</b>
+  <b>Location:</b> <br>
   <%= @project.location %>
 </p>
 
 <p>
-  <b>Year:</b>
+  <b>Year:</b> <br>
   <%= @project.year %>
 </p>
 
 <p>
-  <b>Desciption:</b>
-  <%= @project.desciption %>
+  <b>Desciption:</b> <br>
+  <%= sanitize @project.desciption %>
 </p>
 
+<ul class="thumbnails">
+  <% for picture in @project.pictures %>
+    <li class="span4">
+      <%= image_tag picture.image.thumb.url, :class => "thumbnail" if picture.image? %>
+    </li>
+  <% end %>
+</ul>
+<%= form_for [@project, @picture], :html => {:multipart => true} do |f|%>
+   <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <p></p><%= f.file_field :image %><p>
+  <p> <%= f.submit %> </p>
+
+<% end %>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

@@ -1,31 +1,18 @@
-<h1>Listing projects</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Activitives</th>
-    <th>Location</th>
-    <th>Year</th>
-    <th>Desciption</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>Projects</h1>
+<ul class="thumbnails">
+    <% @projects.each do |project| %>
+        <li class="span4">
+            <% if !project.pictures.first.blank? %>
+                <%= link_to image_tag(project.pictures.first.image.thumb.url, :size => "300x200", :alt => "lorem"), project, :class => "thumbnail" %>
+            <% else %> 
+                <%= link_to image_tag("http://placehold.it/300x200", :alt => "lorem"), project, :class => "thumbnail" %>
+            <% end %> 
 
-<% @projects.each do |project| %>
-  <tr>
-    <td><%= project.name %></td>
-    <td><%= project.activitives %></td>
-    <td><%= project.location %></td>
-    <td><%= project.year %></td>
-    <td><%= project.desciption %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+            <h5 style="text-align:center"><%= project.name %></h5>
+            <h5 style="text-align:center"><%= link_to 'Edit', edit_project_path(project) %> | <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></h5>
+        </li>    
+    <% end %>
+</ul>
 
-<br />
 
-<%= link_to 'New Project', new_project_path %>

@@ -7,12 +7,23 @@
 	<meta name="description" content=" ABBO offers turn-key international standard investment consultancy, engineering and project management services to discriminating Clients wishing to invest in Vietnam. ">
 	<meta name="author" content="@dohoangan">
 	<%= favicon_link_tag "favicon.ico" %>
-  <%= stylesheet_link_tag "application", :media => "all"%>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "admin", :media => "all"%>
+  <%= javascript_include_tag "admin" %>
 	<%= render 'layouts/shim' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <a class="brand" href="#">ABBO Admin</a>
+    <%= link_to 'Create New Project', new_project_path, :class => "btn btn-primary offset9" %>
+      <ul class="nav">
+        <li> <%= link_to "All Prjects", projects_path,%></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+  </div>
+</div>  
+</div>
     <div class="container">
       <div class="row">
         <div class="span12">
