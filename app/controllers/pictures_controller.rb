@@ -2,11 +2,13 @@ class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
   def index
-    @pictures = Picture.all
+    @project = Project.find(params[:project_id])
+    @pictures = @project.pictures
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @pictures }
+      format.json { render json: @pictures.collect { |p| p.to_jq_upload }.to_json }
+
     end
   end
 
@@ -24,7 +26,8 @@ class PicturesController < ApplicationController
   # GET /pictures/new
   # GET /pictures/new.json
   def new
-    @picture = Picture.new
+    @project = Project.find(params[:project_id])
+    @picture = @project.pictures.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,7 +37,9 @@ class PicturesController < ApplicationController
 
   # GET /pictures/1/edit
   def edit
-    @picture = Picture.find(params[:id])
+    @project = Project.find(params[:project_id])
+    @picture = @project.pictures.find(params[:id])
+    # @picture = Picture.find(params[:id])
   end
 
   # POST /pictures
@@ -99,10 +104,9 @@ class PicturesController < ApplicationController
   def destroy
     @picture = Picture.find(params[:id])
     @picture.destroy
-
     respond_to do |format|
-      format.html { redirect_to pictures_url }
-      format.json { head :no_content }
+      format.html { redirect_to gallery_pictures_url }
+      format.js
     end
   end
 end
