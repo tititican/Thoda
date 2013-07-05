@@ -105,8 +105,8 @@ admin.js: admin-6e0c77ce453ed1e34982e2c772961b26.js
 admin/index.js: admin-6e0c77ce453ed1e34982e2c772961b26.js
 application.js: application-c33bfca4478bfe8deaae7952ea2980e5.js
 application/index.js: application-c33bfca4478bfe8deaae7952ea2980e5.js
-admin.css: admin-137d7656471be0a3e3ad97394310aabf.css
-admin/index.css: admin-137d7656471be0a3e3ad97394310aabf.css
+admin.css: admin-2e61d7bff3eaa9a86acf50085728c80b.css
+admin/index.css: admin-2e61d7bff3eaa9a86acf50085728c80b.css
 application.css: application-4eda49b1fa761e398a39ac93bfe2362d.css
 application/index.css: application-4eda49b1fa761e398a39ac93bfe2362d.css
 font/FontAwesome.otf: font/FontAwesome-a9ab9789ce18bb02e5c10c7c3b908ee0.otf
