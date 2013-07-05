@@ -74,5 +74,7 @@ module AbboApp
     config.action_mailer.default_url_options = {
       :host => "abbo.com.vn"
     }
+
+    config.assets.initialize_on_precompile = false
   end
 end
