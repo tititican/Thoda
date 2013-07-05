@@ -25,14 +25,14 @@
   <%= sanitize @project.desciption %>
 </p>
 
-<ul class="thumbnails">
-  <% for picture in @project.pictures %>
-    <li class="span4">
-      <%= image_tag picture.image.thumb.url, :class => "thumbnail" if picture.image? %>
-    </li>
-  <% end %>
-</ul>
 <%= form_for [@project, @picture], :html => { :multipart => true, :id => "fileupload" } do |f| %>
+               <!-- The loading indicator is shown during image processing -->
+        <div class="fileupload-loading"></div>
+        <br>
+        <!-- The table listing the files available for upload/download -->
+        <table class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody>
+        </table>
+
         <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
         <div class="row fileupload-buttonbar">
             <div class="span7">
@@ -63,12 +63,7 @@
                 </div>
             </div>
         </div>
-        <!-- The loading indicator is shown during image processing -->
-        <div class="fileupload-loading"></div>
-        <br>
-        <!-- The table listing the files available for upload/download -->
-        <table class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody>
-        </table>
+ 
     <% end %>
 
     <script>

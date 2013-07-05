@@ -7,3 +7,11 @@ body {
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
+
+.fileinput-button{
+    overflow: visible !important;
+}
+
+.fileupload-buttonbar .ui-button input{
+    top: -150px !important;
+}
