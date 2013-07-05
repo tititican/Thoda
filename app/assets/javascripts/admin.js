@@ -24,3 +24,4 @@
 //= require custom
 //= require jquery.imagemapster
 //= require bootstrap-wysihtml5
+//= require jquery-fileupload

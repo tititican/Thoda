@@ -15,4 +15,8 @@ class StaticPagesController < ApplicationController
 
   def management
   end
+
+  def project
+    @projects = Project.all
+  end
 end

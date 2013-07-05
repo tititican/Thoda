@@ -1,0 +1,22 @@
+<%= render "layouts/navigation" %>
+<%= render "layouts/slide" %>
+<section class="main-content">
+<div class="container">
+  <div class="row">
+		<ul class="thumbnails">
+    <% @projects.each do |project| %>
+        <li class="span4">
+            <% if !project.pictures.first.blank? %>
+                <%= link_to image_tag(project.pictures.first.image.thumb.url, :size => "300x200", :alt => "lorem"), project, :class => "thumbnail" %>
+            <% else %> 
+                <%= link_to image_tag("http://placehold.it/300x200", :alt => "lorem"), project, :class => "thumbnail" %>
+            <% end %> 
+            <h5 style="text-align:center"><%= project.name %></h5>
+        </li>    
+    <% end %>
+</ul>
+  </div>
+</div>
+</section>
+
+

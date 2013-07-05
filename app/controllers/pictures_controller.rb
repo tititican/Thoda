@@ -39,18 +39,42 @@ class PicturesController < ApplicationController
 
   # POST /pictures
   # POST /pictures.json
-  def create
-    @project = Project.find(params[:project_id])
-    @picture = @project.pictures.create(params[:picture])
+  # def create
+  #   @project = Project.find(params[:project_id])
+  #   @picture = @project.pictures.create(params[:picture])
 
-    respond_to do |format|
-      if @picture.save
-        format.html { redirect_to project_path(@project), notice: 'Picture was successfully created.' }
-        format.json { render json: @picture, status: :created, location: @picture }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @picture.errors, status: :unprocessable_entity }
+  #   respond_to do |format|
+  #     if @picture.save
+  #       format.html { redirect_to project_path(@project), notice: 'Picture was successfully created.' }
+  #       format.json { render json: [@picture.to_jq_upload].to_json, status: :created, location: @picture }
+  #     else
+  #       format.html { render action: "new" }
+  #       format.json { render json: @picture.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
+
+  def create
+    p_attr = params[:picture]
+    p_attr[:image] = params[:picture][:image].first if params[:picture][:image].class == Array
+
+    
+      @project = Project.find(params[:project_id])
+      @picture = @project.pictures.build(p_attr)
+
+    if @picture.save
+      respond_to do |format|
+        format.html {
+          render :json => [@picture.to_jq_upload].to_json,
+          :content_type => 'text/html',
+          :layout => false
+        }
+        format.json {
+          render :json => [@picture.to_jq_upload].to_json
+        }
       end
+    else
+      render :json => [{:error => "custom_failure"}], :status => 304
     end
   end
 
