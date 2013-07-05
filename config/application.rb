@@ -75,6 +75,7 @@ module AbboApp
       :host => "abbo.com.vn"
     }
 
+    config.assets.precompile += ['admin.js', 'admin.css']
     config.assets.initialize_on_precompile = false
   end
 end
