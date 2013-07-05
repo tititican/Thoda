@@ -104,9 +104,6 @@ class PicturesController < ApplicationController
   def destroy
     @picture = Picture.find(params[:id])
     @picture.destroy
-    respond_to do |format|
-      format.html { redirect_to gallery_pictures_url }
-      format.js
-    end
+    render :json => true
   end
 end
