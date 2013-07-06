@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130703165712) do
+ActiveRecord::Schema.define(:version => 20130706213356) do
 
   create_table "pictures", :force => true do |t|
     t.string   "description"
@@ -28,8 +28,9 @@ ActiveRecord::Schema.define(:version => 20130703165712) do
     t.string   "location"
     t.integer  "year"
     t.text     "desciption"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.boolean  "featured",    :default => false
   end
 
   create_table "taggings", :force => true do |t|

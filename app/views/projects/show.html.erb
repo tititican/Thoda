@@ -1,27 +1,33 @@
-<p id="notice"><%= notice %></p>
+<% unless flash.empty?  %>
+    <section class="alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <% flash.each do |key, value| %>
+      <div class="flash <%= key %>"><%= value %></div>
+    <% end %>
+    </section>
+<% end %>
 
+<h1><%= @project.name %></h1>
 <p>
-  <b>Name:</b> <br>
-  <%= @project.name %>
-</p>
-
-<p>
-  <b>Activitives:</b> <br>
+  <b>Activitives:</b>
   <%= @project.tag_list %>
 </p>
 
 <p>
-  <b>Location:</b> <br>
+  <b>Location:</b> 
   <%= @project.location %>
 </p>
-
 <p>
-  <b>Year:</b> <br>
+  <b>Featured:</b> 
+  <%= @project.featured %>
+</p>
+<p>
+  <b>Year:</b> 
   <%= @project.year %>
 </p>
 
 <p>
-  <b>Desciption:</b> <br>
+  <b>Desciption:</b> 
   <%= sanitize @project.desciption %>
 </p>
 
@@ -159,5 +165,3 @@
     });
 </script>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
