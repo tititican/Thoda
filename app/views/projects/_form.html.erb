@@ -11,7 +11,9 @@
     </div>
   <% end %>
   <fieldset>
-    <legend>Please input project details:</legend>
+    <legend>Please input project details: 
+      <%= link_to 'Back', projects_path, :class => 'btn pull-right' %>
+    </legend>
   <div class="control-group">
     <%= f.label :name, "Projects Name:", class: "control-label" %>
     <div class="controls">
@@ -63,3 +65,5 @@
     $(elem).wysihtml5();
   });
 </script>
+
+
