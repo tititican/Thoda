@@ -24,30 +24,6 @@ $(window).load(function() {
 /* -- 01.  TWITTER MAKE IT WORK - Just Replace wrapbootstrap username -- */
 
 
-jQuery(function($) {
-    $("#ticker").tweet({
-        username: 'congdongabbo',
-        page: 1,
-        avatar_size: 0,
-        count: 10,
-        template: "{text}{time}",
-        filter: function(t) {
-            return !/^@\w+/.test(t.tweet_raw_text);
-        },
-        loading_text: "loading tweets..."
-    }).bind("loaded", function() {
-        var ul = $(this).find(".tweet_list");
-        var ticker = function() {
-            setTimeout(function() {
-                ul.find('li:first').animate({marginTop: '-30px'}, 500, function() {
-                    $(this).detach().appendTo(ul).removeAttr('style');
-                });
-                ticker();
-            }, 5000);
-        };
-        ticker();
-    });
-});
 
 
 
