@@ -19,7 +19,11 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: abbo
   pool: 5
+  host: localhost
+  username: andh
+  password: andh11
   timeout: 5000

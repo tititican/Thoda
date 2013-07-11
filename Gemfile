@@ -11,6 +11,7 @@ gem 'rmagick'
 gem 'carrierwave'
 gem 'bootstrap-wysihtml5-rails'
 gem 'acts-as-taggable-on'
+gem 'rvm-capistrano'
 
 
 group :development, :test do
@@ -62,10 +63,10 @@ end
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'

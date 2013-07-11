@@ -20,7 +20,6 @@
 //= require jquery.fancybox-media
 //= require jquery.flexslider
 //= require jquery.scrollto
-//= require jquery.tweet
 //= require retina
 //= require custom
 //= require jquery.imagemapster
