@@ -21,13 +21,6 @@ $(window).load(function() {
     });
 });
 
-/* -- 01.  TWITTER MAKE IT WORK - Just Replace wrapbootstrap username -- */
-
-
-
-
-
-
 /* -- 04. NAVBAR STICKY + SELECTED  -- */
 
 
