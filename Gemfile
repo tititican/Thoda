@@ -11,7 +11,6 @@ gem 'rmagick'
 gem 'carrierwave'
 gem 'bootstrap-wysihtml5-rails'
 gem 'acts-as-taggable-on'
-gem 'rvm-capistrano'
 
 
 group :development, :test do
