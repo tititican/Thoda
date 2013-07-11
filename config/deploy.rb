@@ -1,3 +1,4 @@
+require "rvm/capistrano"
 require "bundler/capistrano"
 
 server "192.241.213.52", :web, :app, :db, primary: true
@@ -17,6 +18,7 @@ default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
+after "deploy", "rvm:trust_rvmrc"
 
 namespace :deploy do
   %w[start stop restart].each do |command|
@@ -24,6 +26,11 @@ namespace :deploy do
     task command, roles: :app, except: {no_release: true} do
       run "/etc/init.d/unicorn_#{application} #{command}"
     end
+  end
+
+ namespace :rvm do
+  task :trust_rvmrc do
+    run "rvm rvmrc trust #{release_path}"
   end
 
   task :setup_config, roles: :app do
