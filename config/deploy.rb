@@ -5,11 +5,13 @@ server "192.241.213.52", :web, :app, :db, primary: true
 set :application, "abbo"
 set :user, "root"
 set :deploy_to, "/home/#{user}/apps/#{application}"
-set :deploy_via, :remote_cache
 set :use_sudo, false
 
-set :scm, "git"
-set :repository, "."
+set :scm, :git
+set :repository, "file://."
+set :branch, "master"
+set :deploy_via, :copy
+
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
