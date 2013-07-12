@@ -21,9 +21,9 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: abbo
+  database: 
   pool: 5
   host: localhost
-  username: andh
-  password: andh11
+  username: 
+  password: 
   timeout: 5000

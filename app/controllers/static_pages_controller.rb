@@ -16,8 +16,4 @@ class StaticPagesController < ApplicationController
   def management
   end
 
-  def project
-    @projects = Project.all
-    @tags = Project.tag_counts.map(&:name)
-  end
 end

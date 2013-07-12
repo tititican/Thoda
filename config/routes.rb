@@ -1,10 +1,11 @@
 AbboApp::Application.routes.draw do
 
-  match "about",       to: "static_pages#about"
-  match "development",  to: "static_pages#development"
-  match "design",       to: "static_pages#design"
-  match "management",   to: "static_pages#management"
-  match "abbo_projects",   to: "static_pages#project"
+  match "about",              to: "static_pages#about"
+  match "development",        to: "static_pages#development"
+  match "design",             to: "static_pages#design"
+  match "management",         to: "static_pages#management"
+  match "abbo_projects",      to: "abbo_projects#index"
+  match "abbo_projects/:id",  to: "abbo_projects#show", as: "show_project", via: :get
 
   root :to => 'static_pages#home'
 
