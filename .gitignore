@@ -13,5 +13,5 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/public/picture/image
+/public/picture/image/
 /config/database.yml
