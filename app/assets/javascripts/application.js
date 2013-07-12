@@ -15,7 +15,6 @@
 //= require modernizr.custom
 //= require waypoints.min
 //= require bootstrap
-//=	require jquery.isotope.min
 //= require jquery.fancybox.pack
 //= require jquery.fancybox-media
 //= require jquery.flexslider

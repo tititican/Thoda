@@ -1,4 +1,5 @@
 class AbboProjectsController < ApplicationController
+  layout "project"
   def index
   	@projects = Project.all
     @tags = Project.tag_counts.map(&:name)
@@ -6,6 +7,6 @@ class AbboProjectsController < ApplicationController
 
   def show
   	@project = Project.find(params[:id])
-    @picture = @project.pictures.build
+    @picture = @project.pictures
   end
 end
