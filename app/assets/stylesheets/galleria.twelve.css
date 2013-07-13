@@ -2,7 +2,7 @@
 #galleria {
   height:550px;    /* defines a static gallery height */
   max-width:1280px; /* defines a responsive width */
-  padding: 10px 0 10px 10px;
+  margin-bottom: 30px;
  /* background-color: #e9e9e9;*/
 }   
 #galleria-loader{height:1px!important}
@@ -12,11 +12,14 @@
     overflow: hidden;
     font: 11px/1.4 arial,sans-serif;
     color: #fff;
+    border: 10px solid #fff;
+    padding-bottom: 10px;
 }
 .galleria-container img {
     -moz-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
+
 }
 .galleria-stage {
     overflow: hidden;

@@ -12,7 +12,7 @@
 <div class="container-fluid">
   <div class="project-gallery">
     <div class="row-fluid">
-        <div class="span9">
+        <div class="span8">
           <div id="galleria">
             <% @picture.each do |picture| %>
               if picture.image.not_nil?
@@ -20,7 +20,7 @@
               <% end %>       
           </div>                     
         </div>
-        <div class="span3">
+        <div class="span4">
           <div class="gallery-column">
             <h3><%= @project.name %></h3>
             <p>
