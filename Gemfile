@@ -12,6 +12,7 @@ gem 'carrierwave'
 gem 'bootstrap-wysihtml5-rails'
 gem 'acts-as-taggable-on'
 gem "friendly_id", "4.0.9"
+gem 'rvm-capistrano'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
