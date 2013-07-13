@@ -8,7 +8,7 @@ load "config/recipes/nodejs"
 load "config/recipes/rbenv"
 load "config/recipes/check"
 
-server "72.14.183.209", :web, :app, :db, primary: true
+server "192.241.192.76", :web, :app, :db, primary: true
 
 set :user, "deployer"
 set :application, "abbo"
@@ -17,7 +17,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "git@github.com:ryanb/#{application}.git"
+set :repository, "https://github.com/dohoangan/abbo.git"
 set :branch, "master"
 
 default_run_options[:pty] = true
