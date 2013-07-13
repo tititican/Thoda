@@ -12,45 +12,39 @@
 <div class="container-fluid">
   <div class="project-gallery">
     <div class="row-fluid">
-        <div class="span8">
+        <div class="span9">
           <div id="galleria">
             <% @picture.each do |picture| %>
               <a href="<%= picture.image %>"><img src="<%= picture.image.thumb %>" data-big="<%= picture.image %>" data-title="<%= @project.name %>" ></a>
               <% end %>       
           </div>                     
         </div>
-        <div class="span4">
+        <div class="span3">
           <div class="gallery-column">
             <h3><%= @project.name %></h3>
-            <p>
-              <b>Location:</b> 
-              <%= @project.location %>
-            </p>
-            <p>
-              <b>Activitives:</b>
-              <%= @project.tag_list %>
-            </p>
-            <p>
-              <b>Year:</b> 
-              <%= @project.year %>
-            </p>
-
-            <p>
-              <b>Desciption:</b> 
-              <%= sanitize @project.desciption %>
-            </p>
+            <table class="table table-striped">
+              <tr>
+                <td><b>Location: </b><%= @project.location %></td>
+              </tr>
+              <tr>
+                <td><b>Activitives: </b><%= @project.tag_list %></td>
+              </tr>
+              <tr>
+                <td><b>Year:</b> <%= @project.year %></td>
+              </tr>
+              <tr>
+                <td><b>Desciption: </b><%= sanitize @project.desciption %></td>
+              </tr>
+            </table>
           </div>
         </div>
     </div>
   </div>
 </div>
 </section>
+<!-- Load the Twelve theme -->
 <%= javascript_include_tag "galleria.twelve.min" %>
 <script>
-
-    // Load the Twelve theme
-  
     // Initialize Galleria
   Galleria.run('#galleria');
-
 </script> 
