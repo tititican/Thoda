@@ -15,7 +15,6 @@
         <div class="span8">
           <div id="galleria">
             <% @picture.each do |picture| %>
-              if picture.image.not_nil?
               <a href="<%= picture.image %>"><img src="<%= picture.image.thumb %>" data-big="<%= picture.image %>" data-title="<%= @project.name %>" ></a>
               <% end %>       
           </div>                     
