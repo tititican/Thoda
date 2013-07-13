@@ -16,7 +16,7 @@
 //= require waypoints.min
 //= require bootstrap
 //= require galleria-1.2.9.min
-//= require galleria.twelve.min.js
+//= require galleria.twelve.min
 //=	require jquery.isotope.min
 //= require retina
 //= require project_custom
