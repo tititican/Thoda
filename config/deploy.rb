@@ -12,9 +12,9 @@ set :use_sudo, false
 set :scm, "git"
 set :repository, "https://github.com/dohoangan/abbo.git"
 set :branch, "master"
+set :shared_children, shared_children + %w{public/uploads}
 
 after "deploy:restart", "deploy:cleanup"
-after "deploy", "rvm:trust_rvmrc"
 
 namespace :deploy do
   task :start do ; end
