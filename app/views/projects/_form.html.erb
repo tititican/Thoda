@@ -20,12 +20,35 @@
       <%= f.text_field :name, :class => "input-xxlarge", :placeholder => "required project name" %>
     </div>
   </div>
+  
+   <div class="control-group">
+    <%= f.label :category_id, "Category:", class: "control-label" %>
+    <div class="controls">
+      <%= f.collection_select :category_id, Category.order(:name), :id, :name %>
+    </div>
+  </div>
+
   <div class="control-group">
-    <%= f.label :tag_list, "Activities:", class: "control-label" %>
+    <%= f.label :tag_list, "Tags:", class: "control-label" %>
     <div class="controls">
       <%= f.text_field :tag_list, :class => "input-xxlarge", :placeholder => "seprated by comas" %>
     </div>
   </div>
+
+  <div class="control-group">
+    <%= f.label :owner, "Project's Owner:", class: "control-label" %>
+    <div class="controls">
+      <%= f.text_field :owner, :class => "input-xxlarge", :placeholder => "project's owner name" %>
+    </div>
+  </div>
+
+ <div class="control-group">
+    <%= f.label :nationality, "Nationality:", class: "control-label" %>
+    <div class="controls">
+      <%= f.text_field :nationality, :class => "input-xxlarge", :placeholder => "Nationality" %>
+    </div>
+  </div>
+
 <div class="control-group">
     <%= f.label :featured, "Featured:", class: "control-label" %>
     <div class="controls">

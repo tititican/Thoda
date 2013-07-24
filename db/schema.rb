@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130713002526) do
+ActiveRecord::Schema.define(:version => 20130723172235) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "friendly_id_slugs", :force => true do |t|
     t.string   "slug",                         :null => false
@@ -43,6 +49,9 @@ ActiveRecord::Schema.define(:version => 20130713002526) do
     t.datetime "updated_at",                     :null => false
     t.boolean  "featured",    :default => false
     t.string   "slug"
+    t.integer  "category_id"
+    t.string   "owner"
+    t.string   "nationality"
   end
 
   add_index "projects", ["slug"], :name => "index_projects_on_slug"
