@@ -1,8 +1,12 @@
 class AbboProjectsController < ApplicationController
   layout "project"
   def index
-  	@projects = Project.all
-    @tags = Project.tag_counts.map(&:name)
+  	if params[:search].present? && !params[:search][:category_id].blank?
+  		@projects = Project.where("category_id = ?", params[:search][:category_id])
+  	else
+  		@projects = Project.all
+  	end
+  @tags = Project.tag_counts.map(&:name)
   end
 
   def show

@@ -3,7 +3,17 @@
   <div class="container-fluid">
     <div class="row-fluid">
       <div class="introtitle-text">
-        <h1>// Our Featured Projects</h1>
+        <div class="span8">
+          <h1>// Our Featured Projects</h1>
+        </div>
+        <div class="span4">
+          <%= form_tag abbo_projects_path, :method => 'get' do %>
+            <%= collection_select :search, :category_id, Category.order(:name), :id, :name, 
+                                  {:prompt=>true}, {:class => "input-large"} %>
+            <%= submit_tag "Search", :name => nil%>
+            
+          <% end %>
+        </div>
       </div>  
     </div>  
   </div>
