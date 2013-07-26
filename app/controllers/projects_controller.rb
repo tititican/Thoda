@@ -1,7 +1,8 @@
 class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
-   layout "admin"
+  http_basic_authenticate_with :name => "frodo", :password => "thering"
+  layout "admin"
   def index
     @projects = Project.all
 
