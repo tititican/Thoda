@@ -8,4 +8,6 @@ class Project < ActiveRecord::Base
   
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
+
+  scope :featured, -> { where(featured: true) }
 end

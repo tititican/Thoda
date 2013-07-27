@@ -1,18 +1,45 @@
 
-<h1>All ABBO Projects</h1><br>
-<ul class="thumbnails">
+<h1>ABBO Projects</h1><br>
+<ul class="nav nav-tabs">
+  <li class="active">
+    <a href="#">Index</a>
+  </li>
+  <li><%= link_to 'New project', new_project_path %></li>
+</ul>
+<table class="table table-striped table-hover">  
+  <thead>  
+    <tr>  
+      <th>#</th>  
+      <th>Image</th>
+      <th>Name</th>  
+      <th>Category</th>  
+      <th>Featured</th>
+      <th></th>  
+    </tr>  
+  </thead>  
+  <tbody>  
     <% @projects.each do |project| %>
-        <li class="span4">
+      <tr>
+        <td><%= project.id %></td>
+        <td>
             <% if !project.pictures.first.blank? %>
-                <%= link_to image_tag(project.pictures.first.image.thumb.url, :size => "300x200", :alt => "lorem"), project, :class => "thumbnail" %>
+                <%= link_to image_tag(project.pictures.first.image.thumb.url, :size => "120x80", :alt => "lorem"), project %>
             <% else %> 
                 <%= link_to image_tag("http://placehold.it/300x200", :alt => "lorem"), project, :class => "thumbnail" %>
             <% end %> 
-
-            <h5 style="text-align:center"><%= project.name %></h5>
-            <h5 style="text-align:center"><%= link_to 'Edit', edit_project_path(project) %> | <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></h5>
-        </li>    
+        </td>
+        <td><%= project.name %></td>
+        <td><%= project.category.name %></td>
+        <td>
+            <% if project.featured %>
+                <i class="icon-ok"></i>
+            <% else %>
+                <i class="icon-remove"></i>
+            <% end %>
+        </td>
+        <td><%= link_to 'Show', project %> | <%= link_to 'Edit', edit_project_path(project) %> | <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>  
     <% end %>
-</ul>
-
+  </tbody>  
+</table>  
 
