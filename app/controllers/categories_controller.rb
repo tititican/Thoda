@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
+  http_basic_authenticate_with :name => "frodo", :password => "thering"
   layout "admin"
   def index
     @categories = Category.all

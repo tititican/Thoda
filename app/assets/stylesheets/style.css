@@ -777,6 +777,9 @@ footer a:hover{color: #ccc; text-decoration: none;}
 .btn-blue:hover {
     background:#83adff;
 }
+.thumbnail {
+    height: 150px;
+}
 
 /*----------------------------------
         Button

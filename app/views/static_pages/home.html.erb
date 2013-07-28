@@ -84,117 +84,13 @@
                 </div>
                 <div class="row">
                     <!-- Crown New Can Factory -->
-                    <div class="span3 project">
-							<%=  image_tag "thumbs/1.png", alt: "New Can Can factory", class: "project-img" %>
-                        <a href="img/thumbs/1big.png" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
-                            <span class="overlay"><h5>Crown New Can Factory</h5></span>
-                            <div class="cnt"></div>
-                        </a>
-                        <div id="title-01" class="info hidden">
-                            <h2>Project Details</h2>
-                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
+                    <% @projects.each do |project| %>
+                        <div class="span3">
+                            <%= link_to image_tag(project.pictures.first.image.thumb.url, :alt => "lorem", class: "thumbnail"), project %>
+                            <p style="text-align: center;"><%= project.name %></p>
                         </div>
+                    <% end %>
 
-                
-                    <!-- Cagrill Long An -->
-                    </div>
-                    <div class="span3 project">
-
-                        <%=  image_tag "thumbs/2.png", alt: "Cagrill Long An", class: "project-img" %>
-                        <a href="img/thumbs/2big.png" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
-                            <span class="overlay"><h5>Cargill Long An Factory </h5></span>
-                            <div class="cnt"></div>
-                        </a>
-                    </div>
-
-                    <!-- Aqua Bien Hoa -->
-                    <div class="span3 project">
-
-                        <%=  image_tag "thumbs/3.png", alt: "Aqua Bien Hoa ", class: "project-img" %>
-                        <a href="img/thumbs/3big.png" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
-                            <span class="overlay"><h5>Aqua Bien Hoa</h5></span>
-                            <div class="cnt"></div>
-                        </a>
-                        <div id="title-01" class="info hidden">
-                            <h2>Project Details</h2>
-                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
-                        </div>
-
-                    <!-- La Casa Condominium  -->
-                    </div>
-                    <div class="span3 project">
-
-                        <%=  image_tag "thumbs/4.png", alt: "La Casa Condominium", class: "project-img" %>
-                        <a href="img/thumbs/4big.png" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
-                            <span class="overlay"><h5>La Casa Condominium </h5></span>
-                            <div class="cnt"></div>
-                        </a>
-                        <div id="title-01" class="info hidden">
-                            <h2>Project Details</h2>
-                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
-                        </div>
-
-
-                    <!-- Doosan Heavy Industries  -->
-                    </div>
-                    <div class="span3 project">
-
-                        <%=  image_tag "thumbs/5.jpg", alt: "Doosan Heavy Industries  ", class: "project-img" %>
-                        <a href="img/thumbs/5.jpg" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
-                            <span class="overlay"><h5>Doosan Heavy Industries </h5></span>
-                            <div class="cnt"></div>
-                        </a>
-                        <div id="title-01" class="info hidden">
-                            <h2>Project Details</h2>
-                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
-                        </div>
-
-                    </div>
-
-                    <!-- Doosan Heavy Industries    -->
-                    <div class="span3 project">
-
-                        <%=  image_tag "thumbs/6.jpg", alt: "Doosan Heavy Industries  ", class: "project-img" %>
-                        <a href="img/thumbs/6.jpg" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
-                            <span class="overlay"><h5>Saigon Tantec Leather Factory </h5></span>
-                            <div class="cnt"></div>
-                        </a>
-                        <div id="title-01" class="info hidden">
-                            <h2>Project Details</h2>
-                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
-                        </div>
-
-                    </div>
-
-                    <!-- Kirby Steel Factory -->
-                    <div class="span3 project">
-
-                        <%=  image_tag "thumbs/7.jpg", alt: "Kirby Steel Factory", class: "project-img" %>
-                        <a href="img/thumbs/7.jpg" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
-                            <span class="overlay"><h5>Kirby Steel Factory</h5></span>
-                            <div class="cnt"></div>
-                        </a>
-                        <div id="title-01" class="info hidden">
-                            <h2>Project Details</h2>
-                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
-                        </div>
-
-                    </div>
-
-                    <!-- Lilama Technical & Technology  -->
-                    <div class="span3 project">
-
-                        <%=  image_tag "thumbs/8.jpg", alt: "Lilama Technical & Technology", class: "project-img" %>
-                        <a href="img/thumbs/8.jpg" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
-                            <span class="overlay"><h5>Lilama Technical & Technology </h5></span>
-                            <div class="cnt"></div>
-                        </a>
-                        <div id="title-01" class="info hidden">
-                            <h2>Project Details</h2>
-                            <div class="fancybody">Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem <a href="#">lacinia quam</a> venenatis vestibulum. Maecenas sed diam eget risus varius.</div>
-                        </div>
-
-                    </div>
                 </div>
             </div>
         </section>
