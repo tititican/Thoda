@@ -1,0 +1,6 @@
+<div class="span3">
+  <% @random_projects.each do |project| %>
+    <%= link_to image_tag(project.pictures.first.image.thumb.url, :alt => "lorem", class: "thumbnail"),show_project_path(project) %>
+      <p style="text-align: center;"><%= project.name %></p>
+  <% end %>
+</div>

@@ -20,7 +20,7 @@ class StaticPagesController < ApplicationController
 
 private
   def random_projects
-    @random_projects = Project.random(4)
+    @random_projects = Project.random(3)
   end
 
 end

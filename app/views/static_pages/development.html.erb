@@ -11,13 +11,9 @@
     		<div class="span8">
   				<p>ABBO creates successful strategies for institutional investment programs based on a foundation steeped in expertise and sound judgment. Our work is predicated on analyzing situations — from both a quantitative and qualitative perspective — as we draw upon a wealth of resources to be our client's trusted investment consultant.</p>
           <p>We provide a complete range of investment consulting services that are tailored to your specific goals and circumstances. Our experienced consulting teams have the foresight to respond to new developments before they reach our clients and the objectivity to challenge convention. We can help clients solve their most complex investment problems in practical, cost-effective ways that impact their business.</p>
-
     		</div>
     		<div class="span4">
-    			<% @random_projects.each do |project| %>
-            <%= link_to image_tag(project.pictures.first.image.thumb.url, :alt => "lorem", class: "thumbnail"),show_project_path(project) %>
-              <p style="text-align: center;"><%= project.name %></p>
-          <% end %>
+    		<%= render "layouts/side_projects" %>
     		</div>
     	</div>
     </div>
