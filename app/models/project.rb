@@ -10,4 +10,6 @@ class Project < ActiveRecord::Base
   friendly_id :name, use: [:slugged, :history]
 
   scope :featured, -> { where(featured: true) }
+
+  self.per_page = 10
 end

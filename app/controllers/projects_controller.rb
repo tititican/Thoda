@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   http_basic_authenticate_with :name => "frodo", :password => "thering"
   layout "admin"
   def index
-    @projects = Project.order("projects.id ASC")
+    @projects = Project.includes(:category).paginate(:page => params[:page]).order("projects.id ASC")
 
     respond_to do |format|
       format.html # index.html.erb

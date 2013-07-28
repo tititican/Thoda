@@ -8,16 +8,24 @@
 <% end %>
 
 <h1><%= @project.name %></h1>
-  <dl class="dl-horizontal">
-    <dt><b>Category:</b></dt> <dd><%= @project.category.name %></dd>
-    <dt><b>Tags:</b></dt> <dd><%= @project.tag_list %></dd>
-    <dt><b>Owner:</b></dt> <dd><%= @project.owner %></dd>
-    <dt><b>Featured:</b></dt> <dd><%= @project.featured %></dd>
-    <dt><b>Nationality:</b></dt>  <dd><%= @project.nationality %></dd>
-    <dt><b>Location:</b>   </dt>  <dd><%= @project.location %></dd>
-    <dt><b>Year:</b>       </dt>  <dd><%= @project.year %></dd>
-    <dt><b>Desciption:</b></dt>  <dd><%= sanitize @project.desciption %></dd>
-  </dl>
+
+<ul class="nav nav-tabs">
+  <li><%= link_to "index", projects_path %></li>
+  <li><%= link_to 'New project', new_project_path %></li>
+  <li class="active"><%= link_to 'show', "#" %></li>
+  <li><%= link_to 'Destroy', project_path, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+</ul>
+  
+<dl class="dl-horizontal">
+<dt><b>Category:</b></dt> <dd><%= @project.category.name %></dd>
+<dt><b>Tags:</b></dt> <dd><%= @project.tag_list %></dd>
+<dt><b>Owner:</b></dt> <dd><%= @project.owner %></dd>
+<dt><b>Featured:</b></dt> <dd><%= @project.featured %></dd>
+<dt><b>Nationality:</b></dt>  <dd><%= @project.nationality %></dd>
+<dt><b>Location:</b>   </dt>  <dd><%= @project.location %></dd>
+<dt><b>Year:</b>       </dt>  <dd><%= @project.year %></dd>
+<dt><b>Desciption:</b></dt>  <dd><%= sanitize @project.desciption %></dd>
+</dl>
 
 <%= form_for [@project, @picture], :html => { :multipart => true, :id => "fileupload" } do |f| %>
                <!-- The loading indicator is shown during image processing -->
