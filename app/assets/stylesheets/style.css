@@ -779,6 +779,7 @@ footer a:hover{color: #ccc; text-decoration: none;}
 }
 .thumbnail {
     height: 150px;
+    width:100%;
 }
 
 /*----------------------------------

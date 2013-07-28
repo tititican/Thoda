@@ -86,7 +86,7 @@
                     <!-- Crown New Can Factory -->
                     <% @projects.each do |project| %>
                         <div class="span3">
-                            <%= link_to image_tag(project.pictures.first.image.thumb.url, :alt => "lorem", class: "thumbnail"), project %>
+                            <%= link_to image_tag(project.pictures.first.image.thumb.url, :alt => "lorem", class: "thumbnail"), abbo_project_path(project) %>
                             <p style="text-align: center;"><%= project.name %></p>
                         </div>
                     <% end %>
