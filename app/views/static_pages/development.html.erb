@@ -1,28 +1,23 @@
 <% provide(:title, "Development") %>
 <%= render "layouts/navigation" %>
-<%= render "layouts/slide" %>
+<div class="main-banner-development">
+</div>
 <section class="main-content">
 <div class="container">
   <div class="row">
     <div class="span12">
-    	<h1>ABBO Management</h1>
+    	<h1>Development</h1>
     	<div class="row">
     		<div class="span8">
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt blanditiis molestias doloribus totam et assumenda delectus vel laboriosam ex fuga dolorem eligendi quos esse tenetur officiis incidunt quisquam pariatur illo.</p>
+  				<p>ABBO creates successful strategies for institutional investment programs based on a foundation steeped in expertise and sound judgment. Our work is predicated on analyzing situations — from both a quantitative and qualitative perspective — as we draw upon a wealth of resources to be our client's trusted investment consultant.</p>
+          <p>We provide a complete range of investment consulting services that are tailored to your specific goals and circumstances. Our experienced consulting teams have the foresight to respond to new developments before they reach our clients and the objectivity to challenge convention. We can help clients solve their most complex investment problems in practical, cost-effective ways that impact their business.</p>
 
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt blanditiis molestias doloribus totam et assumenda delectus vel laboriosam ex fuga dolorem eligendi quos esse tenetur officiis incidunt quisquam pariatur illo.</p>
-
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt blanditiis molestias doloribus totam et assumenda delectus vel laboriosam ex fuga dolorem eligendi quos esse tenetur officiis incidunt quisquam pariatur illo.</p>
-
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt blanditiis molestias doloribus totam et assumenda delectus vel laboriosam ex fuga dolorem eligendi quos esse tenetur officiis incidunt quisquam pariatur illo.</p>
-
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt blanditiis molestias doloribus totam et assumenda delectus vel laboriosam ex fuga dolorem eligendi quos esse tenetur officiis incidunt quisquam pariatur illo.</p>
-
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt blanditiis molestias doloribus totam et assumenda delectus vel laboriosam ex fuga dolorem eligendi quos esse tenetur officiis incidunt quisquam pariatur illo.</p>
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt blanditiis molestias doloribus totam et assumenda delectus vel laboriosam ex fuga dolorem eligendi quos esse tenetur officiis incidunt quisquam pariatur illo.</p>
     		</div>
     		<div class="span4">
-    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione velit reiciendis sit eveniet nisi ipsa saepe sapiente exercitationem nulla commodi nostrum cum repellendus doloribus vero voluptas minima cupiditate reprehenderit praesentium.</p>
+    			<% @random_projects.each do |project| %>
+            <%= link_to image_tag(project.pictures.first.image.thumb.url, :alt => "lorem", class: "thumbnail"),show_project_path(project) %>
+              <p style="text-align: center;"><%= project.name %></p>
+          <% end %>
     		</div>
     	</div>
     </div>
