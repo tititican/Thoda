@@ -6,7 +6,7 @@ class AbboProjectsController < ApplicationController
   	else
   		@projects = Project.all
   	end
-  @tags = Project.tag_counts.map(&:name)
+  @tags = Project.tag_counts.map(&:name).sort!
   end
 
   def show
