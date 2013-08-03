@@ -2,8 +2,10 @@ class PagesController < ApplicationController
   # GET /pages
   # GET /pages.json
   layout "admin"
+
+  before_filter :set_page, only: [:show, :edit, :update, :destroy]
   def index
-    @pages = Page.all
+    @pages = Page.arrange_as_array({:order => 'name'})
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +16,6 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
-    @page = Page.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -35,7 +36,7 @@ class PagesController < ApplicationController
 
   # GET /pages/1/edit
   def edit
-    @page = Page.find(params[:id])
+   
   end
 
   # POST /pages
@@ -57,7 +58,7 @@ class PagesController < ApplicationController
   # PUT /pages/1
   # PUT /pages/1.json
   def update
-    @page = Page.find(params[:id])
+    
 
     respond_to do |format|
       if @page.update_attributes(params[:page])
@@ -73,7 +74,6 @@ class PagesController < ApplicationController
   # DELETE /pages/1
   # DELETE /pages/1.json
   def destroy
-    @page = Page.find(params[:id])
     @page.destroy
 
     respond_to do |format|
@@ -81,4 +81,10 @@ class PagesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+
+   def set_page
+      @page = Page.find(params[:id])
+    end
 end
