@@ -1,0 +1,28 @@
+<h1>Listing pages</h1>
+<ul class="nav nav-tabs">
+  <li class="active">
+    <a href="#">Index</a>
+  </li>
+  <li><%= link_to 'New Page', new_page_path %></li>
+</ul>
+
+<table class="table table-striped table-hover">
+  <thead> 
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th>Root Page</th>
+      <th></th>
+    </tr>
+  </thead>
+
+<% @pages.each do |page| %>
+  <tr>
+    <td><%= page.name %></td>
+    <td><%= page.content %></td>
+    <td><%= page.parent.nil? ? "root page" : page.parent.name  %></td>
+    <td><%= link_to 'Show', page %> | <%= link_to 'Edit', edit_page_path(page) %> | <%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
