@@ -1486,13 +1486,17 @@ input, textarea, select, .uneditable-input {
     /* FIXED FOR IE */
 }
 #community, #vission, #organization{
-    padding:70px 0px 0px;
+    padding:90px 0px 0px;
 }
 
 .main-content .navbar-wrapper {
     width: 650px;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: 1px solid #eee;
+   
+}
+
+.main-content .navbar-wrapper .navbar {
+     border-bottom: 1px solid #eee;
 }
 
