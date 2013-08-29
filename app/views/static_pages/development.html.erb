@@ -1,7 +1,20 @@
 <% provide(:title, "Development") %>
 <%= render "layouts/navigation" %>
-<%= render "layouts/slide" %>
-
+<section id="slide-carousel">
+  <div class="row centered">
+    <div id="myCarousel" class="carousel slide">
+      <!-- Craousel Items -->
+      <div class="carousel-inner">
+        <div class="active item">
+            <%= image_tag "subpages-slide/development.jpg", alt: "ABBO Design Services" %>
+            <div class="carousel-caption">
+              <h4>ABBO Development</h4>
+              <p>ABBO offers an integrated, sustainable approach to architectural design, structural engineering and M.E.P enginerring.</p>
+            </div>
+        </div>
+    </div>   
+  </div>
+</section>
 <section class="main-content">
 <div class="container">
   <div class="row">

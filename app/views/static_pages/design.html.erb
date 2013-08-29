@@ -1,6 +1,40 @@
 <% provide(:title, "Design") %>
 <%= render "layouts/navigation" %>
-<%= render "layouts/slide" %>
+<section id="slide-carousel">
+  <div class="row centered">
+    <div id="myCarousel" class="carousel slide">
+      <!-- Craousel Items -->
+      <div class="carousel-inner">
+        <div class="active item">
+            <%= image_tag "subpages-slide/mep.jpg", alt: "Client logo 1" %>
+            <div class="carousel-caption">
+              <h4>ABBO M.E.P Design Service </h4>
+              <p>ABBO offers an integrated, sustainable approach to architectural design, structural engineering and M.E.P enginerring.</p>
+            </div>
+        </div>
+        <div class="item">
+            <%= image_tag "subpages-slide/structure.jpg", alt: "Client logo 1" %>
+            <div class="carousel-caption">
+              <h4>ABBO Structure Service</h4>
+              <p>ABBO offers an integrated, sustainable approach to architectural design, structural engineering and M.E.P enginerring.</p>
+            </div>
+        </div>
+        <div class="item">
+            <%= image_tag "subpages-slide/design.jpg", alt: "Client logo 1" %>
+            <div class="carousel-caption">
+              <h4>ABBO Architure Service</h4>
+              <p>ABBO offers an integrated, sustainable approach to architectural design, structural engineering and M.E.P enginerring.</p>
+            </div>
+        </div>
+      </div>
+      <!-- Carousel nav -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>   
+  </div>
+</section>
+
+
 <section class="main-content">
 <div class="container">
   <div class="row">

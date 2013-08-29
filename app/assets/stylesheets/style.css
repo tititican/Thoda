@@ -1489,6 +1489,10 @@ input, textarea, select, .uneditable-input {
     padding:90px 0px 0px;
 }
 
+#community-content {
+    background: url('logo-middle.png') center bottom no-repeat;
+}
+
 .main-content .navbar-wrapper {
     width: 650px;
     margin-left: auto;
