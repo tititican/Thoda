@@ -1485,23 +1485,16 @@ input, textarea, select, .uneditable-input {
     box-shadow:         0 1px 5px rgba(0,0,0,.2);
     /* FIXED FOR IE */
 }
-#community, #vission, #organization{
-    padding:90px 0px 50px;
+#community, #award, #organization{
+    padding:90px 0px 0px;
 }
-#community {
-    background-color:#EEE;   
-}
-#organization {
-    background-color:#e9e9e9;
-}
-
 
 #community-content {
     background: url('logo-middle.png') center bottom no-repeat;
 }
 
 .main-content .navbar-wrapper {
-    width: 650px;
+    width: 550px;
     margin-left: auto;
     margin-right: auto;
    
@@ -1510,4 +1503,5 @@ input, textarea, select, .uneditable-input {
 .main-content .navbar-wrapper .navbar {
      border-bottom: 1px solid #eee;
 }
+
 
