@@ -15,7 +15,7 @@
                     <li><a style="color:red;" href="#community">ABBO Community</a></li>
                     <li><a style="color:red;" href="#organization">ABBO Organization</a></li>
                     <li><a style="color:red;" href="#award">Award</a></li>
-                    <li><a style="color:red;" href="#gallery">Gallery</a></li>
+                    <!-- <li><a style="color:red;" href="#gallery">Gallery</a></li> -->
                   </ul>
             </div>
         </div>
@@ -106,7 +106,7 @@
                 </div>
               </div>
           </div>
-          
+          <div class="row">
             <div class="span3 project">
                 <%= image_tag "subpages-slide/testimonal5.jpg", alt: "LILAMA2 - testimonal" %>
                 <a href="assets/subpages-slide/testimonal5.jpg" class="fancybox-media" data-title-id="title-01"  rel="portfolio">
@@ -146,7 +146,7 @@
                 <div id="title-01" class="info hidden">
                 </div>
               </div>
-              
+           </div>   
           </div>
         </div>
       </div>
@@ -154,10 +154,11 @@
   </section>
 
 
+
 <script> 
 
 $(function() {
-   $('ul.nav a, #down_button a').click(function(e) {
+   $('.main-content ul.nav a, #down_button a').click(function(e) {
     $('html,body').scrollTo(this.hash, this.hash);
      e.preventDefault();
     });

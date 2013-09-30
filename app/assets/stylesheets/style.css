@@ -670,6 +670,7 @@ footer a:hover{color: #ccc; text-decoration: none;}
 }
 
 .project {
+
     margin-bottom:10px;
     position:relative;
     overflow:hidden;
@@ -681,7 +682,9 @@ footer a:hover{color: #ccc; text-decoration: none;}
 
 .project img {
     width:100%;
+    height: 300px;
     display:block;
+    border: 1px solid rgba(0,0,0,0.1);
     border-radius:4px;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
@@ -1486,7 +1489,18 @@ input, textarea, select, .uneditable-input {
     /* FIXED FOR IE */
 }
 #community, #award, #organization{
-    padding:90px 0px 0px;
+    padding:70px 0px 50px;
+}
+
+#community {
+    background-color:#EEE;
+}
+#organization {
+    background-color: #e9e9e9;
+}
+#award {
+    background-color:#EEE;
+    padding-bottom: 100px;
 }
 
 #community-content {
