@@ -1517,5 +1517,8 @@ input, textarea, select, .uneditable-input {
 .main-content .navbar-wrapper .navbar {
      border-bottom: 1px solid #eee;
 }
+#shape1 {
+    width: 100%;
+}
 
 
