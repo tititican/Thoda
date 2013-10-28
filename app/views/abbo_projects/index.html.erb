@@ -30,15 +30,17 @@
   <div class="row-fluid">
     <div id="content"> 
       <% @projects.each do |project| %>
-        <div class="boxportfolio4 <%= categorize(project) %> ">
-          <div class="boxcontainer">
-            <%= link_to image_tag(project.pictures.first.image.thumb.url, :alt => "lorem"), show_project_path(project)%>
-            <h1><%= project.name %></h1>
-            <p>
-              <%= project.location %>
-            </p>
+        <% unless project.pictures.first.nil? %>
+          <div class="boxportfolio4 <%= categorize(project) %> ">
+            <div class="boxcontainer">
+              <%= link_to image_tag(project.pictures.first.image.thumb.url, :alt => "lorem"), show_project_path(project)%>
+              <h1><%= project.name %></h1>
+              <p>
+                <%= project.location %>
+              </p>
+            </div>
           </div>
-        </div> 
+        <% end %> 
       <% end %>  
     </div>  
   </div>   
