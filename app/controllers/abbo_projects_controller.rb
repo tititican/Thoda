@@ -1,8 +1,8 @@
 class AbboProjectsController < ApplicationController
   layout "project"
   def index
-  	if params[:search].present? && !params[:search][:category_id].blank?
-  		@projects = Project.where("category_id = ?", params[:search][:category_id])
+  	if params[:category_id].present? && !params[:category_id].blank?
+  		@projects = Project.where("category_id = ?", params[:category_id])
   	else
   		@projects = Project.all
   	end

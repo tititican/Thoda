@@ -2,14 +2,14 @@
 <%= render "layouts/navigation" %>
 
 <section id="abbo-project">
-<div class="container-fluid">
-  <div class="project-gallery">
-    <div class="row-fluid">
+  <div class="container-fluid">
+    <div class="project-gallery">
+      <div class="row-fluid">
         <div class="span9">
           <div id="galleria">
             <% @picture.each do |picture| %>
-              <a href="<%= picture.image %>"><img src="<%= picture.image.thumb %>" data-big="<%= picture.image %>" data-title="<%= @project.name %>" ></a>
-              <% end %>       
+            <a href="<%= picture.image %>"><img src="<%= picture.image.thumb %>" data-big="<%= picture.image %>" data-title="<%= @project.name %>" ></a>
+            <% end %>       
           </div>                     
         </div>
         <div class="span3">
@@ -31,13 +31,13 @@
             </table>
           </div>
         </div>
+      </div>
     </div>
   </div>
-</div>
 </section>
 <!-- Load the Twelve theme -->
 <%= javascript_include_tag "galleria.twelve.min" %>
 <script>
     // Initialize Galleria
-  Galleria.run('#galleria');
-</script> 
+    Galleria.run('#galleria');
+    </script> 

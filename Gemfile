@@ -15,6 +15,7 @@ gem "friendly_id", "4.0.9"
 gem 'randumb'
 gem 'ancestry'
 gem 'rvm-capistrano'
+gem 'hirb'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
