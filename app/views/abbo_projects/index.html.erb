@@ -8,7 +8,9 @@
         </div><br>
         <div class="span4">
           <%= form_tag abbo_projects_path, class: "form-inline" do %>
-          <div class="span6"><%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name) %></div>
+          <div class="span6"><%= select_tag :category_id, 
+                  options_from_collection_for_select(Category.all, :id, :name), prompt: "View All Projects"%>
+          </div>
           <div class="span1"><%= submit_tag("Search", class: "btn") %></div>
           <% end %>
 
