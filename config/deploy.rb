@@ -1,7 +1,7 @@
 require "rvm/capistrano"
 require "bundler/capistrano"
 
-server "192.241.192.76", :web, :app, :db, primary: true
+server "162.243.240.224", :web, :app, :db, primary: true
 
 set :application, "abbo"
 set :user, "deployer"
@@ -10,7 +10,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "https://github.com/dohoangan/abbo.git"
+set :repository, "https://github.com/tititican/Thoda.git"
 set :branch, "master"
 set :shared_children, shared_children + %w{public/uploads}
 
