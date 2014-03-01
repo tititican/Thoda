@@ -1,7 +1,7 @@
 require "rvm/capistrano"
 require "bundler/capistrano"
 
-server "128.199.224.39", :web, :app, :db, primary: true
+server "128.199.228.94", :web, :app, :db, primary: true
 
 set :application, "abbo"
 set :user, "deployer"
