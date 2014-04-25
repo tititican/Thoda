@@ -1520,4 +1520,19 @@ input, textarea, select, .uneditable-input {
     width: 100%;
 }
 
+.box_icon a {
 
+    color:#D03030;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+
+.box_icon a:hover h6     {
+    color:#b45b5b;}    
+
+.box_icon a h6 {
+    color:#777;
+}
