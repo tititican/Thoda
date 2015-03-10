@@ -1239,6 +1239,13 @@ footer a:hover{color: #ccc; text-decoration: none;}
     bottom: 5%;
 }
 
+#activities_link{
+
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
 .carousel-inner img {
     width:100%;
     margin-left: auto;
